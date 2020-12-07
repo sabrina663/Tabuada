@@ -29,7 +29,7 @@ function tabuada(){
         tabela.id = 'idtab'
         let tab = document.getElementById('tab').appendChild(tabela)
         /* laço */
-        for(let x = 1;x <=10; x++){
+        for(let x = 0;x <=10; x++){
             let tr = tab.insertRow()
             tr.innerHTML = `${number} x ${x} = ${number * x}`
         }
