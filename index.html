@@ -7,22 +7,22 @@
     <title>Tabuada</title>
 </head>
 <body>
-    <div class='conteiner'>
-        <div class="int-all">
-            <label for='number'>Digite o Número:</label>
-            <input type='number' id='number'>
-             <br>
-             <p>x</p>
-             <br>
-            <label for='multiplicador'>Multiplicar por:</label>
-            <input type='number' id='multiplicador'>
-        </div><!--//int-all-->
-        <div class='bt-div'>
-            <button onclick='resultado()'>Resultado</button>
-        </div><!--//bt-div-->
-        <div id='area-result'>
-
-        </div><!--//area-result-->
+    <div id='cont' class='conteiner'>
+        <div class="sub-conteiner resultado-now">
+            <h1>Tabuada</h1>
+            <div class='conteiner-input'>
+                <input type='number' id='number' placeholder='Numero'>
+                <h3>X</h3>
+                <input type='number' id='multiplicador' placeholder='Multiplicador'>
+            </div><!-- //conteiner-input -->
+            <div class="button-area">
+                <button class='resultado' onclick="resultado()">Resultado</button>
+                <button class='tabuada-btn' onclick="tabuada()">Tabuada</button>
+            </div><!-- button area -->
+            <div id='result-now' class="result-div" >
+                <p class='recado'>Preencha os campos acima para gerar o resultado da Multiplicação, ou preencha apenas o campo Numero para gerar a tabuada de 0 a 10 </p>
+            </div><!--//area-result-->
+        </div><!--//sub-continer-->
     </div><!--//conteiner-->
     <script src='_js/script.js'></script>
 </body>

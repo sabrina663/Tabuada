@@ -1,73 +1,135 @@
+/* padrão */
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 body{
-    background-color: aliceblue;
+    background-color: #264653;
 }
 .conteiner{
-    width:300px;
-    margin:100px 50%;
-    transform: translate(-50%);
-    border:1px solid rgb(68, 67, 67);
-    padding:20px;
-    transition-duration:2s ;
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    height:100vh;
+    padding:0px 50px;
 }
-.conteiner:hover{
-    background:rgb(160, 231, 222);
-}
-.int-all{
+.sub-conteiner{
     text-align: center;
+    width:500px;
+    height:500px;
+    margin:80px auto;
 }
-label{
-    color:rgb(36, 36, 36);
-    font-size:1.2em;
+/*  */
+/* resultado gerado na hora */
+h1{
+    color: #e9c46a;
+    position: relative;
+    top:50px;
+    font-size:2.5em;
+}
+.resultado-now{
+    background-color: #2a9d8f;
+}
+.conteiner-input{
+    position:relative;
+    left:50%;
+    top:15%;
+    padding:40px;
+    transform: translate(-50%);
+    display:flex;
+    justify-content: center;
+}
+h3{
+    margin:0px 20px;
+}
+.button-area{
+    position: relative;
+    top:50px;
 }
 input{
-    width:40%;
-    height:25px;
-    margin-top:30px;
-    margin-bottom: 20px;
+    width:100px;
+    height:30px;
     outline:none;
-    border:2px solid rgba(199, 194, 194, 0.63);
-    border-radius:5px;
-    text-align: center;
+    padding:5px 10px;
+    border:1px solid rgba(5, 5, 5, 0.63);
     transition-duration: 1s;
 }
-input:hover{
-    background-color:rgba(167, 162, 162, 0.295) ;
-}
-p{
-    color: rgb(134, 133, 133);
-    font-weight:bold;
-    margin-top:20px;
-}
-.bt-div{
-    text-align: center;
-}
-button{
-    margin:35px 0;
-    padding:15px;
-    outline:none;
-    background-color:rgb(111, 192, 111);
-    border:none;
-    transition-duration: 1s;
-    cursor: pointer;
-}
-button:hover{
-    background-color:rgb(98, 167, 98);
-}
-#area-result{
-    margin-bottom:20px;
-}
-#area-result p{
-    color:black;
-}
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
+input:hover{
+    background-color:rgba(167, 162, 162, 0.295) ;
+}
+button{
+    margin:35px 5px;
+    padding:15px;
+    outline:none;
+    border:none;
+    transition-duration: 1s;
+    cursor: pointer;
+    border:1px solid rgba(70, 69, 69, 0.795);
+}
+button.resultado{
+    background-color: rgb(87, 194, 87);
+}
+button.resultado:hover{
+    background-color:rgb(98, 167, 98);
+}
+button.tabuada-btn{
+    background-color: #f4a261;
+}
+button.tabuada-btn:hover{
+    background-color: #eb9148;
+}
+.result-div{
+    padding:10px;
+    position: relative;
+    top:70px;
+    z-index:1;
+}
+.result-div p{
+    text-align: center;
+    padding:15px;
+    font-size:1.3em;
+}
+.result-div p.recado{
+    padding:10px;
+    font-size:1.0em;
+    text-align: center;
+}
+/*  */
+
+/* tabuada */
+.tabuada{
+    background-color: #e76f51;
+    display:flex;
+    justify-content: center;
+    padding:10px;
+}
+table{
+    border:1px solid #f4a261;
+    width:450px;
+    height:100%;
+    padding:10px;
+    font-size:1.3em;
+}
+tr{
+    padding:10px;
+    color:#264653;
+}
+/* .bt-div{
+    text-align: center;
+}
+
+
+#area-result{
+    margin-bottom:20px;
+}
+#area-result p{
+    color:black;
+}
+ */
