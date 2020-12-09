@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel='stylesheet' href='_css/estilo.css'>
     <title>Tabuada</title>
 </head>
 <body>
     <div id='cont' class='conteiner'>
-        <div class="sub-conteiner resultado-now">
+        <div  class="sub-conteiner resultado-now">
             <h1>Tabuada</h1>
             <div class='conteiner-input'>
                 <input type='number' id='number' placeholder='Numero'>
@@ -16,14 +18,15 @@
                 <input type='number' id='multiplicador' placeholder='Multiplicador'>
             </div><!-- //conteiner-input -->
             <div class="button-area">
-                <button class='resultado' onclick="resultado()">Resultado</button>
-                <button class='tabuada-btn' onclick="tabuada()">Tabuada</button>
+                <button type="button" class="btn btn-lg btn-primary resultado" onclick="resultado()">Resultado</button>
+                <button type="button" class="btn btn-secondary btn-lg tabuada-btn" onclick="tabuada()">Tabuada</button>
             </div><!-- button area -->
-            <div id='result-now' class="result-div" >
-                <p class='recado'>Preencha os campos acima para gerar o resultado da Multiplicação, ou preencha apenas o campo Numero para gerar a tabuada de 0 a 10 </p>
-            </div><!--//area-result-->
+            <div id='result-now' class="result-div card">
+                <p class="card-body">Preencha ambos campos para gerar um resultado, ou so preencha o campo numero para gerar a tabuada de 0 a 10</p>
+            </div>
         </div><!--//sub-continer-->
     </div><!--//conteiner-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src='_js/script.js'></script>
 </body>
 </html>

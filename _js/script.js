@@ -9,33 +9,39 @@ function resultado(){
         msg.innerHTML = `<p>A multiplicação de ${number} x ${mult} é ${number * mult}</p>`
         msg.style.color = 'rgb(6, 65, 6)'
     }
+    document.getElementById('number').value = ''
+    document.getElementById('multiplicador').value = ''
 }
 function tabuada(){
+    /* recuperar o valor do campo */
     let number = document.getElementById('number').value
     document.getElementById('multiplicador').value = ''
-    let msg = document.getElementById('result-now')
     /* analise do campo numero */
     if (number === ''){
+        let msg = document.getElementById('result-now')
         msg.innerHTML = '<p>Por favor Digite um valor valido no campo Numero se deseja ver a tabuada</p>'
         msg.style.color = 'rgb(90, 20, 20)'
     }else{
         /* criação da div  tabuada */
-        let display_right = document.createElement('div');
-        display_right.className = 'sub-conteiner tabuada'
-        display_right.id = 'tab'
-        let conteiner = document.getElementById('cont').appendChild(display_right);
+        let div = document.createElement('div');
+        $("#div").remove()
+        /* da estilização pro div tabuada */
+        div.className = 'sub-conteiner tabuada'
+        div.id = 'div'
+        document.getElementById('cont').appendChild(div);
         /* criacao da tabela */
-        let tabela = document.createElement('table')
-        tabela.id = 'idtab'
-        let tab = document.getElementById('tab').appendChild(tabela)
+        let table = document.createElement('table')
+        $('table').remove();
+        let tabela = document.getElementById('div').appendChild(table) 
+        /* $('table').remove(); */
         /* laço */
         for(let x = 0;x <=10; x++){
-            let tr = tab.insertRow()
+            let tr = tabela.insertRow()
             tr.innerHTML = `${number} x ${x} = ${number * x}`
         }
         document.getElementById('number').value = ''
-  
     }
+    
 }
 
 
