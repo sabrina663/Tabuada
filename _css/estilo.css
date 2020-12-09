@@ -13,7 +13,6 @@ body{
     margin:0 auto;
     height:100vh;
     padding:0px 50px;
-    min-width:250px;
 }
 .sub-conteiner{
     text-align: center;
@@ -48,7 +47,7 @@ h3{
 }
 .button-area{
     position: relative;
-    top:50px;
+    top:80px;
 }
 input{
     width:90%;
@@ -67,7 +66,7 @@ input::-webkit-inner-spin-button {
 input:hover{
     background-color:rgba(167, 162, 162, 0.295) ;
 }
-button{/* 
+button{
     margin:35px 5px;
     padding:15px 5px;
     outline:none;
@@ -75,11 +74,15 @@ button{/*
     transition-duration: 1s;
     cursor: pointer;
     border:1px solid rgba(70, 69, 69, 0.795);
-    width:30%; */
+    width:30%;
 }
 button.resultado{
     background-color: rgb(87, 194, 87);
 }
+button.resultado{
+    background-color: rgb(87, 194, 87);
+}
+
 button.resultado:hover{
     background-color:rgb(98, 167, 98);
 }
@@ -92,21 +95,14 @@ button.tabuada-btn:hover{
 .result-div{
     padding:10px;
     position: relative;
-    top:50px;
+    top:90px;
     border:none;
     background-color: #2a9d8f;
     z-index:1;
-}/* 
+}
 .result-div p{
-    text-align: center;
-    padding:15px;
     font-size:1.3em;
 }
-.result-div p.recado{
-    padding:10px;
-    font-size:1.0em;
-    text-align: center;
-} */
 /*  */
 
 /* tabuada */
@@ -156,9 +152,8 @@ tr{
     }
     .result-div{
         padding:15px;
-        font-size:0.5em;
+        font-size:0.8em;
         top:5px;
-        z-index:1;
     }
     table{
         font-size:1.0em;
