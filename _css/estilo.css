@@ -1,162 +1,58 @@
-/* padrão */
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
 body{
-    background-color: #264653;
+    background-image:linear-gradient(to bottom right,#5667dd,#5ecbf7);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+} 
+html{
+    color:#141414;
 }
 .conteiner{
+    background-color: white;
+    border-radius: 10px 30px;
+    padding:15px 20px;
+    width:50%;
+    margin:15% auto;
+    text-align: center;
+}
+.sub-conteiner .conteiner-input input{
+    padding:10px;
+    outline: none;
+    width:50%;
+}
+.sub-conteiner .conteiner-input{
+    margin-bottom:25px;
+}
+.sub-conteiner .conteiner-button button{
+    margin-left: 10px;
+    border:none;
+    outline: none;
+    padding:15px 8px;
+    outline: none;
+    margin-top:10px;
+    color:#ffff;
+}
+.conteiner-button button.resultado-btn{
+    background-color:#5667dd;
+}
+.conteiner-button button.tabuada-btn{
+    background-color:#5ecbf7;
+}
+.sub-conteiner .conteiner-button{
     display: flex;
     justify-content: center;
-    margin:0 auto;
-    height:100vh;
-    padding:0px 50px;
+    flex-wrap: wrap;
 }
-.sub-conteiner{
-    text-align: center;
-    width:50%;
-    height:500px;
-    margin:auto;
-
+.sub-conteiner section h3{
+    font-size: 0.9em;
+    font-weight: 10;
 }
-/*  */
-/* resultado gerado na hora */
-h1{
-    color: #e9c46a;
-    position: relative;
-    top:50px;
-    font-size:2.5em;
+.sub-conteiner .result-div p{
+    font-size: 0.9em;
+    padding:20px;
 }
-.resultado-now{
-    background-color: #2a9d8f;
-}
-.conteiner-input{
-    width:90%;
-    position:relative;
-    left:50%;
-    top:15%;
-    padding:40px;
-    transform: translate(-50%);
-    display:flex;
-    justify-content: center;
-}
-h3{
-    margin:0px 20px;
-}
-.button-area{
-    position: relative;
-    top:80px;
-}
-input{
-    width:90%;
-    height:30px;
-    outline:none;
-    padding:5px 10px;
-    border:1px solid rgba(5, 5, 5, 0.63);
-    transition-duration: 1s;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-input:hover{
-    background-color:rgba(167, 162, 162, 0.295) ;
-}
-button{
-    margin:35px 5px;
-    padding:15px 5px;
-    outline:none;
-    border:none;
-    transition-duration: 1s;
-    cursor: pointer;
-    border:1px solid rgba(70, 69, 69, 0.795);
-    width:30%;
-}
-button.resultado{
-    background-color: rgb(87, 194, 87);
-}
-button.resultado{
-    background-color: rgb(87, 194, 87);
-}
-
-button.resultado:hover{
-    background-color:rgb(98, 167, 98);
-}
-button.tabuada-btn{
-    background-color: #f4a261;
-}
-button.tabuada-btn:hover{
-    background-color: #eb9148;
-}
-.result-div{
-    padding:10px;
-    position: relative;
-    top:90px;
-    border:none;
-    background-color: #2a9d8f;
-    z-index:1;
-}
-.result-div p{
-    font-size:1.3em;
-}
-/*  */
-
 /* tabuada */
-.tabuada{
-    background-color: #e76f51;
-    display:flex;
-    justify-content: center;
+.tabuada table{
+    margin:0 auto;
     padding:10px;
-}
-table{
-    border:1px solid #f4a261;
-    width:100%;
-    height:100%;
-    padding:15px;
-    font-size:1.3em;
-}
-tr{
-    padding:10px;
-    color:#264653;
-}
-@media screen and (max-width:800px){
-    .conteiner{
-        padding:0;
-        flex-direction: column;
-        margin:0 auto;
-    }
-    .sub-conteiner{
-        height:300px;
-        width:90%;
-
-    }
-    .tabuada{
-        margin:100px auto;
-    }
-    h1{
-        font-size:1.8em;
-        top:20px;
-    }
-    .conteiner-input{
-        top:20px;
-    }
-    input{
-        width:80%;
-    }
-    .button-area{
-        top:0px;
-    }
-    .result-div{
-        padding:15px;
-        font-size:0.8em;
-        top:5px;
-    }
-    table{
-        font-size:1.0em;
-    }
-    
 }

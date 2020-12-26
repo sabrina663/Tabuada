@@ -1,12 +1,12 @@
 function resultado(){
     let number = document.getElementById('number').value
     let mult = document.getElementById('multiplicador').value
-    let msg = document.getElementById('result-now')
+    let msg = document.getElementById('msg-now')
     if (number === '' || mult === ''){
         msg.innerHTML = '<p>Por favor Digite um valor valido em ambos campos, so assim o resultado sera gerado</p>'
         msg.style.color = 'rgb(90, 20, 20)'
     }else{
-        msg.innerHTML = `<p>A multiplicação de ${number} x ${mult} é ${number * mult}</p>`
+        msg.innerHTML = `<p class='resultado'>A multiplicação de ${number} x ${mult} é ${number * mult}</p>`
         msg.style.color = 'rgb(6, 65, 6)'
     }
     document.getElementById('number').value = ''
@@ -18,7 +18,7 @@ function tabuada(){
     document.getElementById('multiplicador').value = ''
     /* analise do campo numero */
     if (number === ''){
-        let msg = document.getElementById('result-now')
+        let msg = document.getElementById('msg-now')
         msg.innerHTML = '<p>Por favor Digite um valor valido no campo Numero se deseja ver a tabuada</p>'
         msg.style.color = 'rgb(90, 20, 20)'
     }else{
