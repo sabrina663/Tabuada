@@ -4,10 +4,10 @@ function resultado(){
     let msg = document.getElementById('msg-now')
     if (number === '' || mult === ''){
         msg.innerHTML = '<p>Por favor Digite um valor valido em ambos campos, so assim o resultado sera gerado</p>'
-        msg.style.color = 'rgb(90, 20, 20)'
+        msg.style.color = 'red'
     }else{
         msg.innerHTML = `<p class='resultado'>A multiplicação de ${number} x ${mult} é ${number * mult}</p>`
-        msg.style.color = 'rgb(6, 65, 6)'
+        msg.style.color = 'green'
     }
     document.getElementById('number').value = ''
     document.getElementById('multiplicador').value = ''
@@ -20,7 +20,7 @@ function tabuada(){
     if (number === ''){
         let msg = document.getElementById('msg-now')
         msg.innerHTML = '<p>Por favor Digite um valor valido no campo Numero se deseja ver a tabuada</p>'
-        msg.style.color = 'rgb(90, 20, 20)'
+        msg.style.color = 'red'
     }else{
         /* criação da div  tabuada */
         let div = document.createElement('div');
